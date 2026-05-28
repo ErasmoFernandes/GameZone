@@ -1,0 +1,165 @@
+body{
+    background: linear-gradient(rgb(17, 17, 53),black);
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* Pour que le site reste en plein ecran */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    height: 90px;
+    padding: 0 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 170, 255, 0.15);
+}
+
+/* Logo */
+.logo{
+    width: 80px;
+    height: auto;
+}
+
+/* Menu de navigation */
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Liens du menu */
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    position: relative;
+    transition: 0.3s ease;
+}
+
+
+/* Effet quand la souris passe sur les liens */
+.menu a:hover{
+    color: #00aaff;
+}
+
+/* Petit trait sous le lien au hover */
+.menu a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #00aaff;
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    transition: 0.3s ease;
+}
+
+/* Le trait apparaît au hover */
+.menu a:hover::after{
+    width: 100%;
+}
+
+/* Bouton LOGIN différent */
+.login-link{
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* Hover du LOGIN */
+.login-link:hover{
+    background-color: white;
+    color: #020617 !important;
+}
+
+/* Titre dans la section hero (h2) */
+.hero.title{
+    color: white;
+    font-size: 60px;
+
+    /* Position du titre proche du bouton */
+    position: absolute;
+    bottom: 290px;
+    left: 70px;
+}
+
+/* Bouton du hero */
+.hero.button{
+    background-color: white;
+    color: rgb(2, 0, 128);
+
+    /* Bouton un peu plus grand */
+    padding: 18px 35px;
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    text-decoration: none;
+
+    position: absolute;
+    bottom: 200px;
+    left: 70px;
+
+    /* Animation douce du hover */
+    transition: 0.3s ease;
+}
+
+/* Effet quand la souris passe sur le bouton */
+.hero.button:hover{
+    background-color: rgba(23, 0, 128, 0.24);
+    color: white;
+    transform: scale(1.08);
+}
+
+/* Image du hero */
+.hero.image{
+    border-radius: 20px;
+    float: right;
+
+    /* Descendre l'image et la rapprocher du milieu */
+    transform: translate(-80px, -10px);
+
+    /* Animation douce */
+    transition: 0.3s ease;
+
+    margin-top: 250px;
+}
+
+/* Effet quand la souris passe sur l'image */
+.hero.image:hover{
+    transform: translate(-80px, -10px) scale(1.04);
+    cursor: pointer;
+    box-shadow: 0 0 35px rgba(0, 170, 255, 0.25);
+    border-color: rgba(0, 170, 255, 0.55);
+}
+
+
+
