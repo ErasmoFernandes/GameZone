@@ -1,25 +1,24 @@
 body{
-    background: linear-gradient(rgb(17, 17, 53),black);
+    background: linear-gradient(rgb(17, 17, 53), black);
     width: 100%;
     min-height: 100vh;
-    max-height: 100vh;
 
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
-/* Pour que le site reste en plein ecran */
+
+/* Pour que le site reste bien organisé */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
 .header{
     width: 100%;
-    height: 90px;
-    padding: 0 50px;
+    height: 55px;
+    padding: 8px 25px;
 
     display: flex;
     align-items: center;
@@ -35,15 +34,17 @@ body{
     border-bottom: 1px solid rgba(0, 170, 255, 0.15);
 }
 
+/* Logo */
 .logo{
-    width: 80px;
+    width: 55px;
     height: auto;
 }
 
+/* Menu de navigation */
 .menu{
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 8px;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -51,20 +52,18 @@ body{
 .menu a{
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
-
+    padding: 6px 10px;
     position: relative;
     transition: 0.3s ease;
 }
 
-/* Effet quand tu passes le souris */
 .menu a:hover{
     color: #00aaff;
 }
 
-/* Ligne bleu en bas du login */
 .menu a::after{
     content: "";
     width: 0;
@@ -73,66 +72,71 @@ body{
 
     position: absolute;
     left: 0;
-    bottom: -8px;
+    bottom: -5px;
 
     transition: 0.3s ease;
 }
 
-/* LINHA APARECE NO HOVER */
 .menu a:hover::after{
     width: 100%;
 }
 
-
-.login-btn{
+/* Bouton LOGIN différent */
+.login-btn,
+.login-link{
     border: 1px solid white;
     padding: 10px 20px;
     border-radius: 25px;
 }
 
-.login-btn:hover{
+.login-btn:hover,
+.login-link:hover{
     background-color: white;
     color: #050514 !important;
 }
 
+/* SECTION EVENTOS */
 .events-section{
     min-height: 100vh;
     color: white;
 
     background: linear-gradient(180deg, rgb(17, 17, 53), #050514, black);
 
-    padding: 170px 85px 80px;
+    padding: 115px 60px 60px;
 
     cursor: pointer;
+    
 }
 
+/* TITRE */
 .events-title{
     text-align: center;
     color: #00aaff;
-    font-size: 58px;
+    font-size: 42px;
     font-weight: 900;
-    margin-bottom: 70px;
+    margin-bottom: 45px;
 
     text-shadow: 0 0 20px rgba(0, 170, 255, 0.45);
 }
 
-/* BLoque des 3 colones */
+/* BLOCO DAS 3 COLUNAS */
 .events-container{
     display: flex;
-    justify-content: space-between;
-    gap: 70px;
+    justify-content: center;
+    align-items: stretch;
+    gap: 135px;
 }
 
-
+/* CADA DIA */
 .event-day{
-    width: 33%;
+    width: 280px;
     text-align: center;
 
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(0, 170, 255, 0.20);
-    border-radius: 22px;
+    border-radius: 20px;
 
-    padding: 35px 35px 25px;
+    padding: 25px 25px 18px;
 
     box-shadow: 0 0 25px rgba(0, 170, 255, 0.08);
     transition: 0.3s ease;
@@ -144,32 +148,208 @@ body{
     border-color: rgba(0, 170, 255, 0.55);
 }
 
+/* TÍTULO DO DIA */
 .event-day h2{
-    font-size: 40px;
-    margin-bottom: 45px;
+    font-size: 28px;
+    margin-bottom: 28px;
     color: white;
 }
 
-/* chauqe evenr */
+/* CADA EVENTO */
 .event-item{
     border-bottom: 1px solid rgba(255, 255, 255, 0.45);
-    padding: 15px 0;
+    padding: 12px 0;
 }
 
-/* derniere event sans ligne */
+/* Último evento sem linha */
 .event-item:last-child{
     border-bottom: none;
 }
 
-/* Horaire */
+/* HORÁRIO */
 .event-item p{
-    font-size: 23px;
+    font-size: 17px;
     margin-bottom: 3px;
     color: white;
 }
 
-/* NOM de l'event */
+/* NOME DO EVENTO */
 .event-item span{
-    font-size: 22px;
+    font-size: 16px;
     color: #dbeafe;
+}
+
+/* ================= RESPONSIVO ================= */
+
+/* TABLET */
+@media (max-width: 1024px){
+
+    .menu{
+        gap: 5px;
+    }
+
+    .menu a{
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    .promotions-section{
+        grid-template-columns: repeat(2, 260px);
+        gap: 35px;
+    }
+
+    .events-container{
+        gap: 25px;
+    }
+
+    .event-day{
+        width: 260px;
+    }
+
+    .membres-section{
+        gap: 35px;
+    }
+}
+
+
+/* TELEPHONE */
+@media (max-width: 768px){
+
+    .header{
+        height: auto;
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo{
+        width: 45px;
+    }
+
+    .menu{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .menu a{
+        font-size: 10px;
+        padding: 5px 7px;
+    }
+
+    .login-link,
+    .login-btn{
+        padding: 6px 12px;
+    }
+
+    .membres-title,
+    .promotions-title,
+    .events-title{
+        font-size: 32px;
+        padding-top: 130px;
+        margin-bottom: 30px;
+    }
+
+    .membres-section{
+        flex-direction: column;
+        gap: 25px;
+        margin: 20px;
+        margin-top: 30px;
+    }
+
+    .membres-card{
+        width: 90%;
+        max-width: 280px;
+    }
+
+    .membres-card img{
+        height: 210px;
+    }
+
+    .promotions-section{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 30px;
+        padding: 0 20px 50px;
+    }
+
+    .promotion-item{
+        width: 90%;
+        max-width: 280px;
+    }
+
+    .events-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .event-day{
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .login-box{
+        width: 90%;
+        max-width: 420px;
+        padding: 25px 20px;
+    }
+
+    .login-title{
+        font-size: 26px;
+    }
+}
+
+
+/* PETIT TELEPHONE */
+@media (max-width: 480px){
+
+    .menu a{
+        font-size: 9px;
+        padding: 4px 6px;
+    }
+
+    .membres-title,
+    .promotions-title,
+    .events-title{
+        font-size: 26px;
+    }
+
+    .promotions-title span{
+        font-size: 22px;
+    }
+
+    .membres-card,
+    .promotion-item,
+    .event-day{
+        width: 95%;
+    }
+
+    .membres-card img,
+    .promotion-item img{
+        height: 180px;
+    }
+
+    .event-day h2{
+        font-size: 24px;
+    }
+
+    .event-item p{
+        font-size: 16px;
+    }
+
+    .event-item span{
+        font-size: 15px;
+    }
+
+    .login-box{
+        width: 92%;
+        padding: 22px 18px;
+    }
+
+    .login-form input,
+    .login-form button{
+        padding: 12px;
+        font-size: 14px;
+    }
 }

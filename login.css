@@ -19,94 +19,86 @@ body{
     font-family: 'Times New Roman', Times, serif;
 }
 
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 .login-box{
-    width: 600px;
-    padding: 40px 35px;
+    width: 500px;
+    padding: 30px 28px;
 
     background: rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(0, 170, 255, 0.35);
-    border-radius: 22px;
+    border-radius: 20px;
 
     text-align: center;
 
-    box-shadow: 0 0 25px rgba(0, 170, 255, 0.25);
+    box-shadow: 0 0 22px rgba(0, 170, 255, 0.25);
 }
-
 
 .login-title{
     color: white;
-    font-size: 35px;
-    margin-bottom: 30px;
+    font-size: 30px;
+    margin-bottom: 25px;
 
     text-shadow: 0 0 15px rgba(0, 170, 255, 0.6);
 }
 
-
 .login-form{
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 14px;
 }
-
 
 .login-form input{
     width: 100%;
-    padding: 15px;
+    padding: 13px;
 
     border: 1px solid rgba(0, 170, 255, 0.35);
-    border-radius: 15px;
+    border-radius: 13px;
     outline: none;
 
     background: rgba(255, 255, 255, 0.08);
     color: white;
 
-    font-size: 16px;
+    font-size: 15px;
 }
-
 
 .login-form input::placeholder{
     color: #dbeafe;
 }
 
 .login-form button{
-    margin-top: 10px;
-    padding: 15px;
+    margin-top: 8px;
+    padding: 13px;
 
     border: none;
-    border-radius: 25px;
+    border-radius: 22px;
 
     background-color: white;
     color: rgb(17, 17, 53);
 
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
 
     cursor: pointer;
     transition: 0.3s ease;
 }
 
-
 .login-form button:hover{
     background-color: #00aaff;
     color: white;
 
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .register-text{
     color: white;
-    margin-top: 25px;
-    font-size: 16px;
+    margin-top: 20px;
+    font-size: 14px;
 }
-
 
 .register-text a{
     color: #00aaff;
@@ -114,8 +106,182 @@ body{
     font-weight: bold;
 }
 
-
 .register-text a:hover{
     color: white;
     text-shadow: 0 0 10px rgba(0, 170, 255, 0.8);
+}
+
+/* ================= RESPONSIVO ================= */
+
+/* TABLET */
+@media (max-width: 1024px){
+
+    .menu{
+        gap: 5px;
+    }
+
+    .menu a{
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    .promotions-section{
+        grid-template-columns: repeat(2, 260px);
+        gap: 35px;
+    }
+
+    .events-container{
+        gap: 25px;
+    }
+
+    .event-day{
+        width: 260px;
+    }
+
+    .membres-section{
+        gap: 35px;
+    }
+}
+
+
+/* TELEPHONE */
+@media (max-width: 768px){
+
+    .header{
+        height: auto;
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo{
+        width: 45px;
+    }
+
+    .menu{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .menu a{
+        font-size: 10px;
+        padding: 5px 7px;
+    }
+
+    .login-link,
+    .login-btn{
+        padding: 6px 12px;
+    }
+
+    .membres-title,
+    .promotions-title,
+    .events-title{
+        font-size: 32px;
+        padding-top: 130px;
+        margin-bottom: 30px;
+    }
+
+    .membres-section{
+        flex-direction: column;
+        gap: 25px;
+        margin: 20px;
+        margin-top: 30px;
+    }
+
+    .membres-card{
+        width: 90%;
+        max-width: 280px;
+    }
+
+    .membres-card img{
+        height: 210px;
+    }
+
+    .promotions-section{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 30px;
+        padding: 0 20px 50px;
+    }
+
+    .promotion-item{
+        width: 90%;
+        max-width: 280px;
+    }
+
+    .events-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .event-day{
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .login-box{
+        width: 90%;
+        max-width: 420px;
+        padding: 25px 20px;
+    }
+
+    .login-title{
+        font-size: 26px;
+    }
+}
+
+
+/* PETIT TELEPHONE */
+@media (max-width: 480px){
+
+    .menu a{
+        font-size: 9px;
+        padding: 4px 6px;
+    }
+
+    .membres-title,
+    .promotions-title,
+    .events-title{
+        font-size: 26px;
+    }
+
+    .promotions-title span{
+        font-size: 22px;
+    }
+
+    .membres-card,
+    .promotion-item,
+    .event-day{
+        width: 95%;
+    }
+
+    .membres-card img,
+    .promotion-item img{
+        height: 180px;
+    }
+
+    .event-day h2{
+        font-size: 24px;
+    }
+
+    .event-item p{
+        font-size: 16px;
+    }
+
+    .event-item span{
+        font-size: 15px;
+    }
+
+    .login-box{
+        width: 92%;
+        padding: 22px 18px;
+    }
+
+    .login-form input,
+    .login-form button{
+        padding: 12px;
+        font-size: 14px;
+    }
 }
