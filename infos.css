@@ -83,7 +83,6 @@ body{
 }
 
 /* Bouton LOGIN différent */
-
 .login-btn,
 .login-link{
     border: 1px solid white;
@@ -97,10 +96,10 @@ body{
     color: #050514 !important;
 }
 
-
+/* PAGE INFOS */
 .infos-page{
     min-height: 100vh;
-    padding: 150px 70px 60px;
+    padding: 120px 60px 50px;
 
     display: flex;
     flex-direction: column;
@@ -112,107 +111,98 @@ body{
 .infos-title{
     color: white;
     text-align: center;
-    font-size: 50px;
+    font-size: 42px;
     line-height: 1.1;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
 
     text-shadow: 0 0 15px rgba(0, 170, 255, 0.45);
 }
 
-/* Pour le texte ça le recadre bien */
+/* Sous-titre */
 .infos-title span{
     display: block;
     color: #ffffff;
-    font-size: 28px;
-    margin-top: 12px;
+    font-size: 24px;
+    margin-top: 10px;
 }
 
-
+/* Carte */
 .infos-card{
-    width: 650px;
+    width: 560px;
     max-width: 100%;
 
     background: rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(0, 170, 255, 0.35);
-    border-radius: 22px;
+    border-radius: 20px;
 
-    padding: 35px;
+    padding: 28px;
     text-align: center;
 
-    box-shadow: 0 0 25px rgba(0, 170, 255, 0.18);
+    box-shadow: 0 0 22px rgba(0, 170, 255, 0.18);
     transition: 0.3s ease;
 }
-
 
 .infos-card:hover{
     transform: translateY(-6px);
     box-shadow: 0 0 35px rgba(0, 170, 255, 0.35);
 }
 
-
 .infos-email{
     color: white;
-    font-size: 20px;
-    margin-bottom: 22px;
+    font-size: 17px;
+    margin-bottom: 18px;
 }
-
 
 .infos-linkedin{
     color: #00aaff;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     text-decoration: none;
 
     transition: 0.3s ease;
 }
 
-
 .infos-linkedin:hover{
     color: white;
     text-shadow: 0 0 15px rgba(0, 170, 255, 0.8);
 }
 
-/* ================= RESPONSIVO ================= */
+/* RESPONSIVE POUR TABLETTE */
+@media screen and (max-width: 1024px){
 
-/* TABLET */
-@media (max-width: 1024px){
-
-    .menu{
-        gap: 5px;
+    .infos-page{
+        padding: 120px 40px 50px;
     }
 
-    .menu a{
-        font-size: 11px;
-        padding: 5px 8px;
+    .infos-title{
+        font-size: 36px;
     }
 
-    .promotions-section{
-        grid-template-columns: repeat(2, 260px);
-        gap: 35px;
+    .infos-title span{
+        font-size: 22px;
     }
 
-    .events-container{
-        gap: 25px;
-    }
-
-    .event-day{
-        width: 260px;
-    }
-
-    .membres-section{
-        gap: 35px;
+    .infos-card{
+        width: 500px;
+        padding: 25px;
     }
 }
 
+/* RESPONSIVE POUR TELEPHONE */
+@media screen and (max-width: 768px){
 
-/* TELEPHONE */
-@media (max-width: 768px){
+    body{
+        overflow-x: hidden;
+        min-height: 100vh;
+    }
 
     .header{
         height: auto;
-        padding: 12px 15px;
+        padding: 15px 10px;
         flex-direction: column;
-        gap: 12px;
+        justify-content: center;
+        gap: 15px;
+        position: relative;
     }
 
     .logo{
@@ -220,129 +210,81 @@ body{
     }
 
     .menu{
+        width: 100%;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 8px;
+        gap: 12px;
     }
 
     .menu a{
-        font-size: 10px;
-        padding: 5px 7px;
+        font-size: 11px;
+        padding: 5px 8px;
+        letter-spacing: 1px;
     }
 
     .login-link,
     .login-btn{
-        padding: 6px 12px;
+        padding: 6px 15px;
+        border-radius: 20px;
     }
 
-    .membres-title,
-    .promotions-title,
-    .events-title{
-        font-size: 32px;
-        padding-top: 130px;
+    .infos-page{
+        padding: 60px 20px 40px;
+        justify-content: flex-start;
+    }
+
+    .infos-title{
+        font-size: 30px;
         margin-bottom: 30px;
     }
 
-    .membres-section{
-        flex-direction: column;
-        gap: 25px;
-        margin: 20px;
-        margin-top: 30px;
+    .infos-title span{
+        font-size: 18px;
+        margin-top: 8px;
     }
 
-    .membres-card{
+    .infos-card{
         width: 90%;
-        max-width: 280px;
+        padding: 22px;
+        border-radius: 18px;
     }
 
-    .membres-card img{
-        height: 210px;
-    }
-
-    .promotions-section{
-        grid-template-columns: 1fr;
-        justify-items: center;
-        gap: 30px;
-        padding: 0 20px 50px;
-    }
-
-    .promotion-item{
-        width: 90%;
-        max-width: 280px;
-    }
-
-    .events-container{
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .event-day{
-        width: 90%;
-        max-width: 300px;
-    }
-
-    .login-box{
-        width: 90%;
-        max-width: 420px;
-        padding: 25px 20px;
-    }
-
-    .login-title{
-        font-size: 26px;
-    }
-}
-
-
-/* PETIT TELEPHONE */
-@media (max-width: 480px){
-
-    .menu a{
-        font-size: 9px;
-        padding: 4px 6px;
-    }
-
-    .membres-title,
-    .promotions-title,
-    .events-title{
-        font-size: 26px;
-    }
-
-    .promotions-title span{
-        font-size: 22px;
-    }
-
-    .membres-card,
-    .promotion-item,
-    .event-day{
-        width: 95%;
-    }
-
-    .membres-card img,
-    .promotion-item img{
-        height: 180px;
-    }
-
-    .event-day h2{
-        font-size: 24px;
-    }
-
-    .event-item p{
-        font-size: 16px;
-    }
-
-    .event-item span{
+    .infos-email{
         font-size: 15px;
     }
 
-    .login-box{
-        width: 92%;
-        padding: 22px 18px;
+    .infos-linkedin{
+        font-size: 15px;
+    }
+}
+
+/* PETIT TELEPHONE */
+@media screen and (max-width: 480px){
+
+    .menu a{
+        font-size: 10px;
+        padding: 4px 6px;
     }
 
-    .login-form input,
-    .login-form button{
-        padding: 12px;
+    .infos-title{
+        font-size: 26px;
+    }
+
+    .infos-title span{
+        font-size: 16px;
+    }
+
+    .infos-card{
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .infos-email{
+        font-size: 14px;
+    }
+
+    .infos-linkedin{
         font-size: 14px;
     }
 }
